@@ -6,25 +6,24 @@ public class Main
 {
     public static void main(String[] args)
     {
-        System.out.print("Enter shape size [size >= 3, odd number]: ");
         drawFigure(readSize());
     }
 
     private static int readSize()
     {
+        System.out.print("Enter shape size [size >= 3, odd number]: ");
         Scanner scn = new Scanner(System.in);
-        int size = scn.nextInt();
-        if (checkSizeMore3AndOdd(size))
+        return checkSizeLimits(scn.nextInt());
+    }
+
+    private static int checkSizeLimits(int size)
+    {
+        if (size % 2 != 0 && size >= 3)
         {
             return size;
         }
-        System.out.print("You entered an even number and/or less than 3. Try again: ");
+        System.out.println("You entered an even number and/or less than 3. ");
         return readSize();
-    }
-
-    private static boolean checkSizeMore3AndOdd(int size)
-    {
-        return size % 2 != 0 && size >= 3;
     }
 
     private static void drawFigure(int size)
