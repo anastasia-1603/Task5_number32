@@ -22,7 +22,7 @@ public class Main
         {
             return size;
         }
-        System.out.println("You entered an even number and/or less than 3. ");
+        System.out.println("You entered an even number and/or less than 3.");
         return readSize();
     }
 
