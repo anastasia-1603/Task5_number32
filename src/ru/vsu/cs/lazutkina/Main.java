@@ -21,7 +21,7 @@ public class Main
         int size = readInt("Enter shape size [size >= 3, odd number]: ");
         while (!checkSizeLimits(size))
         {
-            size = readInt("You entered an even number and/or less than 3. Try again: 1");
+            size = readInt("You entered an even number and/or less than 3. Try again: ");
         }
         return size;
     }
